@@ -197,11 +197,100 @@
 
 
 
+.text-center {
+    margin-bottom: 100px;
+}
 
+.client {
+    width: 100%;
+    height: 100%;
+}
+.grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
 
+.f1-c, 
+.f2-c, 
+.f3-c {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px #219cf3,
+    2px 2px 1px #08e9de,
+    inset 10px 0px 60px #080a11,
+    inset -27px -32px 60px #090912,
+    inset -5px -6px 30px #0b83ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: .6s ease;
+    z-index: 0;
+}
 
+.f1-text,
+.f2-text,
+.f3-text {
+    position: absolute;
+    opacity: 0;
+    width: 250px;
+    left: 30%;
+    transition: 0.5s ease;
+    z-index: -1;
+    scale: 0;
+}
 
+.f2-text {
+    left: 25%;
+}
 
+.f3-text {
+    left: 80%;
+}
+
+.icon-c {
+    transition: .6s ease;
+}
+
+.f1-c:hover, 
+.f2-c:hover, 
+.f3-c:hover {
+    width: 250%;
+}
+
+.f1-c:hover .icon-c, 
+.f3-c:hover .icon-c {
+    transform: translateX(-150%);
+}
+
+.f2-c:hover .icon-c {
+    transform: translateX(150%);
+} 
+
+.f1-c:hover .f1-text {
+    opacity: 1;
+    scale: 1;
+    left: 25%;
+    transition: .6s ease;
+}
+
+.f2-c:hover .f2-text {
+    opacity: 1;
+    scale: 1;
+    left: 30%;
+    transition: .6s ease;
+}
+
+.f3-c:hover .f3-text {
+    opacity: 1;
+    scale: 1;
+    left: 75%;
+    transition: .6s ease;
+}
 
 
 
