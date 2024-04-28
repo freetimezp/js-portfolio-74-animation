@@ -125,8 +125,71 @@ box4.onmouseenter = function () {
 }
 
 
+/*projects*/
 
+let design1 = document.getElementById("design1");
+let design2 = document.getElementById("design2");
+let design3 = document.getElementById("design3");
+let design4 = document.getElementById("design4");
+let design5 = document.getElementById("design5");
 
+let selectSquare = document.querySelector(".select-square");
+
+let forFigma = document.querySelector(".for-figma");
+let forWordpress = document.querySelector(".for-wordpress");
+let forCss = document.querySelector(".for-css");
+let forPython = document.querySelector(".for-python");
+let forJavascript = document.querySelector(".for-javascript");
+
+design1.onmouseenter = function () {
+    selectSquare.style.top = "8%";
+
+    forFigma.classList.add('java-figma');
+    forWordpress.classList.remove('java-wordpress');
+    forCss.classList.remove('java-css');
+    forPython.classList.remove('java-python');
+    forJavascript.classList.remove('java-javascript');
+}
+
+design2.onmouseenter = function () {
+    selectSquare.style.top = "28%";
+
+    forFigma.classList.remove('java-figma');
+    forWordpress.classList.add('java-wordpress');
+    forCss.classList.remove('java-css');
+    forPython.classList.remove('java-python');
+    forJavascript.classList.remove('java-javascript');
+}
+
+design3.onmouseenter = function () {
+    selectSquare.style.top = "47%";
+
+    forFigma.classList.remove('java-figma');
+    forWordpress.classList.remove('java-wordpress');
+    forCss.classList.add('java-css');
+    forPython.classList.remove('java-python');
+    forJavascript.classList.remove('java-javascript');
+}
+
+design4.onmouseenter = function () {
+    selectSquare.style.top = "67%";
+
+    forFigma.classList.remove('java-figma');
+    forWordpress.classList.remove('java-wordpress');
+    forCss.classList.remove('java-css');
+    forPython.classList.add('java-python');
+    forJavascript.classList.remove('java-javascript');
+}
+
+design5.onmouseenter = function () {
+    selectSquare.style.top = "88%";
+
+    forFigma.classList.remove('java-figma');
+    forWordpress.classList.remove('java-wordpress');
+    forCss.classList.remove('java-css');
+    forPython.classList.remove('java-python');
+    forJavascript.classList.add('java-javascript');
+}
 
 
 
