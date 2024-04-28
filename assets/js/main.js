@@ -2,7 +2,7 @@ let menuIn = document.querySelector(".menu-in");
 let menu = document.querySelector(".menu2");
 
 menuIn.onclick = function () {
-    menu.classList.add('active');
+    menu.classList.toggle('active');
 }
 
 
@@ -190,6 +190,130 @@ design5.onmouseenter = function () {
     forPython.classList.remove('java-python');
     forJavascript.classList.add('java-javascript');
 }
+
+
+/* scroll */
+
+let fourBox = document.querySelector(".four-box");
+let detail = document.querySelector(".detail");
+let textAll = document.querySelectorAll(".text");
+let textFlex = document.querySelector(".text-flex");
+let squareScroll1 = document.querySelector(".square1");
+let squareScroll2 = document.querySelector(".square2");
+let menuProject = document.querySelector(".menu-project");
+let textCenter = document.querySelector(".text-center");
+let company = document.querySelector(".grid");
+let form = document.getElementById("form");
+let footer = document.querySelector(".footer");
+let logoShow = document.querySelector(".logo-show");
+
+window.addEventListener('scroll', checkBox);
+
+checkBox();
+
+function checkBox() {
+    const triggerBottom = (window.innerHeight / 4) * 3;
+
+    const scroll1 = fourBox.getBoundingClientRect().top;
+    const scroll2 = detail.getBoundingClientRect().top;
+
+    const scroll4 = textFlex.getBoundingClientRect().top;
+    const scroll5 = squareScroll1.getBoundingClientRect().top;
+    const scroll6 = squareScroll2.getBoundingClientRect().top;
+    const scroll7 = menuProject.getBoundingClientRect().top;
+    const scroll8 = textCenter.getBoundingClientRect().top;
+    const scroll9 = company.getBoundingClientRect().top;
+    const scroll10 = form.getBoundingClientRect().top;
+    const scroll11 = footer.getBoundingClientRect().top;
+    const scroll12 = logoShow.getBoundingClientRect().top;
+
+    if (scroll1 < triggerBottom) {
+        fourBox.classList.add('show');
+    } else {
+        fourBox.classList.remove('show');
+    }
+
+    if (scroll2 < triggerBottom) {
+        detail.classList.add('show');
+    } else {
+        detail.classList.remove('show');
+    }
+
+
+    textAll.forEach((text) => {
+        const scroll3 = text.getBoundingClientRect().top;
+
+        if (scroll3 < triggerBottom) {
+            text.classList.add('show');
+        } else {
+            text.classList.remove('show');
+        }
+    });
+
+
+    if (scroll4 < triggerBottom) {
+        textFlex.classList.add('show');
+    } else {
+        textFlex.classList.remove('show');
+    }
+
+    if (scroll5 < triggerBottom) {
+        squareScroll1.classList.add('show');
+    } else {
+        squareScroll1.classList.remove('show');
+    }
+
+    if (scroll6 < triggerBottom) {
+        squareScroll2.classList.add('show');
+    } else {
+        squareScroll2.classList.remove('show');
+    }
+
+    if (scroll7 < triggerBottom) {
+        menuProject.classList.add('show');
+    } else {
+        menuProject.classList.remove('show');
+    }
+
+    if (scroll8 < triggerBottom) {
+        textCenter.classList.add('show');
+    } else {
+        textCenter.classList.remove('show');
+    }
+
+    if (scroll9 < triggerBottom) {
+        company.classList.add('show');
+    } else {
+        company.classList.remove('show');
+    }
+
+    if (scroll10 < triggerBottom) {
+        form.classList.add('show');
+    } else {
+        form.classList.remove('show');
+    }
+
+    if (scroll11 < triggerBottom) {
+        footer.classList.add('show');
+    } else {
+        footer.classList.remove('show');
+    }
+
+    if (scroll12 < triggerBottom) {
+        logoShow.classList.add('show');
+    } else {
+        logoShow.classList.remove('show');
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
