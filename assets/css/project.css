@@ -251,6 +251,31 @@
 
 
 
+
+.menu-project {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: 1s ease;
+}
+.menu-project.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width : 1650px)
 {
 }

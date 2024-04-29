@@ -294,6 +294,39 @@
 
 
 
+
+.square1,
+.square2 {
+    top: 0;
+    opacity: 0;
+    transition: 1s ease .1s;
+}
+.square1.show {
+    top: 10%;
+    opacity: 1;
+}
+.square2.show {
+    top: -15%;
+    opacity: 1;
+}
+
+.grid {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s ease .1s;
+}
+.grid.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
 @media (max-width : 1650px)
 {
 }
@@ -386,7 +419,7 @@
     .square2.show
     {
         top: -50%;
-        width: 550px;
+        width: 522px;
         height: 315px;
         top: 15%;
     }
@@ -428,7 +461,7 @@
     .square1
     {
         top: 0;
-        left: -20%;
+        left: -15%;
         order: -1;
         transform: scale(0.75);
     }

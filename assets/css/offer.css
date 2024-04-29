@@ -7,9 +7,26 @@ section {
     position: relative;
 }
 
-.detail {
-    top: 60px;
+.offer::before {
+    content: '';
+    width: 600px;
+    height: 2000px;
+    border-radius: 50%;
+    background: #14bac2;
+    position: absolute;
+    top: 160%;
+    left: -40%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    filter: blur(200px);
 }
+
+.detail {
+    top: 110px;
+    opacity: 0;
+    transition: 1s ease;
+}
+
 
 .text-flex,
 .four-box {
@@ -294,12 +311,32 @@ section {
 
 
 
-
-
-
-
-
-
+.four-box {
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: 1s ease;
+}
+.four-box.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.detail.show {
+    top: 60px;
+    opacity: 1;
+}
+.text,
+.text-flex,
+.text-center {
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: 1s ease;
+}
+.text.show,
+.text-flex.show,
+.text-center.show {
+    transform: translateX(0);
+    opacity: 1;
+}
 
 
 
